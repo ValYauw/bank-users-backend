@@ -2,6 +2,8 @@
 
 Repository ini merupakan tampungan kode untuk sebuah REST API kecil yang melayani data buat berbagai user. REST API hanya melayani dua entrypoint (root directory, atau '/', dan '/:id') dengan empat method (GET, POST, PUT, DELETE).
 
+Integrasi dengan frontend: https://github.com/ValYauw/bank-users-frontend
+
 Tech Stack:
  - .NET Framework v6.0
  - C# Programming Language
