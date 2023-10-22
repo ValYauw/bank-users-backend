@@ -20,12 +20,13 @@ namespace BNI_Users_backend.Controllers
     {
       int numRecordsPerPage = 20;
       var count = db.User.Count();
+      int numPages = (int)Math.Ceiling((decimal)count / numRecordsPerPage);
       var data = await db.User.
         OrderBy(item => item.id).Reverse().
         Skip(((pageNumber ?? 1) - 1) * numRecordsPerPage).
         Take(numRecordsPerPage).
         ToListAsync();
-      return Results.Ok(new { Count = count, Data = data });
+      return Results.Ok(new { NumPages = numPages, Data = data });
     }
 
     public static async Task<IResult> GetUserById(

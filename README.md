@@ -40,20 +40,24 @@ Run perintah ini untuk me-run .NET Web API.
 Response - 200 OK
 
 ```json
-[
-  {
-    "id": 1,
-    "fName": "John",
-    "lName": "Doe",
-    "fullName": "John Doe",
-    "telephone": "0811111111",
-    "email": "john.doe@mail.com",
-    "dateOfBirth": "1990-01-01T00:00:00",
-    "description": "A businessman",
-    "questionSecondAuthentication": "Apakah nama sekolah pertama anda?"
-  },
-  ...
-]
+{
+    "numPages": 1,
+    "data": [
+        {
+            "id": 1,
+            "fName": "John",
+            "lName": "Doe",
+            "fullName": "John Doe",
+            "telephone": "0811111111",
+            "email": "john.doe@mail.com",
+            "dateOfBirth": "1990-01-01T00:00:00",
+            "description": "A businessman",
+            "questionSecondAuthentication": "Apakah nama sekolah pertama anda?"
+        },
+        ...
+    ]
+}
+
 ```
 
 ### POST: `/`

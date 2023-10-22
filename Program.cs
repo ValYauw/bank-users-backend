@@ -18,7 +18,10 @@ builder.Services.AddCors(options =>
   options.AddPolicy(name: MyAllowSpecificOrigins,
     builder =>
     {
-        builder.WithOrigins("*");  // Sebutkan domain yang diperbolehkan di sini
+      // Sebutkan domain yang diperbolehkan di sini
+      builder.WithOrigins("http://localhost:5173", "*")
+        .AllowAnyHeader()
+        .AllowAnyMethod();
     });
 });
 
