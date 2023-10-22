@@ -18,7 +18,7 @@ namespace BNI_Users_backend.Controllers
       [FromQuery(Name = "p")] int? pageNumber
     )
     {
-      int numRecordsPerPage = 20;
+      int numRecordsPerPage = 10;
       var count = db.User.Count();
       int numPages = (int)Math.Ceiling((decimal)count / numRecordsPerPage);
       var data = await db.User.

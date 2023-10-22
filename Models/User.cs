@@ -65,7 +65,7 @@ namespace BNI_Users_backend.Models
             RuleFor(x => x.description).NotEmpty().WithMessage("Deskripsi singkat harus diberikan");
             RuleFor(x => x.questionSecondAuthentication).NotNull().WithMessage("Pertanyaan untuk autentikasi kedua harus diberikan");
             RuleFor(x => x.questionSecondAuthentication).NotEmpty().WithMessage("Pertanyaan untuk autentikasi kedua harus diberikan");
-            RuleFor(x => x.telephone).Matches("[0-9]+").WithMessage("Nomor telephone tidak valid");
+            RuleFor(x => x.telephone).Matches("^[0-9]+$").WithMessage("Nomor telephone tidak valid");
             RuleFor(x => x.email).EmailAddress().WithMessage("Email tidak valid");
         }
     }
